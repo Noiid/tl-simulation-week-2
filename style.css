@@ -45,6 +45,10 @@
     /* object-fit: cover; */
 }
 
+.navbar .hamburger-btn {
+    display: none;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -109,10 +113,18 @@ a:active {
     filter: grayscale(80%);
 }
 
-@media only screen and (max-width: 400px) {
-    .navbar {
+@media only screen and (max-width: 600px) {
+    /* .navbar {
         flex-direction: column;
         justify-content: center;
+    } */
+
+    .navbar a {
+        display: none;
+    }
+
+    .navbar .hamburger-btn {
+        display: block;
     }
 }
 
@@ -199,6 +211,17 @@ ul {
 
 .btn-click::first-letter {
     color: red;
+}
+
+#menu-mobile {
+    position: fixed;
+    background-color: white;
+    height: 200px;
+    width: 100%;
+}
+
+.menu-mobile-nonactive {
+    display: none;
 }
 
 /* .container-grid > div > p {

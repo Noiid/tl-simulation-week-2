@@ -23,8 +23,22 @@
             <a href="" class="menu-home">Home</a>
             <a href="">Profile</a>
             <a href="">About us</a>
+            <img class="hamburger-btn" onclick="onOpenMenu()"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
+                alt="" width="20px">
         </div>
     </header>
+
+    <section>
+        <div id="menu-mobile" class="menu-mobile-nonactive">
+            <button onclick="onCloseMenu()" id="btn-close">Close</button>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">About us</a></li>
+            </ul>
+        </div>
+    </section>
 
     <section>
         <div class="container">
@@ -106,7 +120,19 @@
         <h2>Ini Footer</h2>
     </footer>
 
+    <script>
+        function onOpenMenu() {
+            console.log("click open menu");
+            const popupMenu = document.getElementById("menu-mobile");
+            popupMenu.classList.remove("menu-mobile-nonactive")
+        }
 
+        function onCloseMenu() {
+            console.log("click close menu");
+            const popupMenu = document.getElementById("menu-mobile");
+            popupMenu.classList.add("menu-mobile-nonactive")
+        }
+    </script>
 
 </body>
 
